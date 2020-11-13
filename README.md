@@ -1,3 +1,6 @@
+[![ci](https://github.com/pschmitt/wa-automate-docker/workflows/ci/badge.svg)](https://github.com/pschmitt/wa-automate-docker/actions?query=workflow%3Aci)
+[![Docker Pulls](https://img.shields.io/docker/pulls/pschmitt/open-wa)](https://hub.docker.com/repository/docker/pschmitt/open-wa)
+
 # wa-automate-docker
 
 This repo shows a simple way to create a memory efficient API out of your WhatsApp account using docker.
