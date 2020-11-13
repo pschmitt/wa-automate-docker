@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   browser:
-    image: browserless/chrome:1.22-chrome-stable
+    image: browserless/chrome:1-chrome-stable
     hostname: browser
     ports:
       - "3000:3000"
@@ -28,6 +28,7 @@ services:
       NODE_ENV: 'production'
 
   app:
+    image: pschmitt/open-wa
     build: .
     restart: on-failure
     depends_on:
@@ -37,5 +38,7 @@ services:
     environment:
       WA_BROWSER_WS_ENDPOINT: 'http://browser:3000'
       WA_DISABLE_SPINS: 'true'
+      WA_SKIP_UPDATE_CHECK: 'false'
+      WA_KEEP_UPDATED: 'true'
       # Uncomment next line and add the session data base64 string to authenticate the session without the need to scan it again
       # WA_SESSION_DATA: ''
