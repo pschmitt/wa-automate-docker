@@ -4,11 +4,11 @@ FROM node:current-alpine
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package*.json ./
+COPY package.json ./
 
 RUN apk add --no-cache python3 alpine-sdk && \
-  npm ci --ignore-scripts --verbose && \
-  npm rebuild --silent --no-color sharp
+  npm install --only=dev --ignore-scripts --verbose && \
+  npm rebuild --verbose --no-color sharp
 
 EXPOSE 8080
 

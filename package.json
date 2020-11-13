@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx @open-wa/wa-automate --in-docker -p 8080 --npm-options=--ignore-scripts",
-    "sessiondata": "npx @open-wa/wa-automate --disable-spins --session-data-only"
+    "sessiondata" : "npx @open-wa/wa-automate --disable-spins --session-data-only"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/open-wa/wa-automate-docker#readme",
   "dependencies": {},
   "devDependencies": {
-    "@open-wa/wa-automate": "^3.0.15",
+    "@open-wa/wa-automate": "latest",
     "npx": "^10.2.2"
   }
 }
